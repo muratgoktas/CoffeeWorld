@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:p="http://www.w3.org/2001/XMLSchema" xmlns:tns="https://tckimlik.nvi.gov.tr/Service/KPSPublic.asmx?wsdl" name="MernisWSDLFilePortType" targetNamespace="https://tckimlik.nvi.gov.tr/Service/KPSPublic.asmx?wsdl">
+    
+  <types>
+        
+    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="https://tckimlik.nvi.gov.tr/Service/KPSPublic.asmx?wsdl">
+            
+      <xsd:element name="NewOperation">
+                
+        <xsd:complexType>
+                    
+          <xsd:sequence>
+                        
+            <xsd:element name="in" type="xsd:string"/>
+                      
+          </xsd:sequence>
+                  
+        </xsd:complexType>
+              
+      </xsd:element>
+            
+      <xsd:element name="NewOperationResponse">
+                
+        <xsd:complexType>
+                    
+          <xsd:sequence>
+                        
+            <xsd:element name="out" type="xsd:string"/>
+                      
+          </xsd:sequence>
+                  
+        </xsd:complexType>
+              
+      </xsd:element>
+          
+    </xsd:schema>
+      
+  </types>
+    
+  <message name="NewOperationRequest">
+        
+    <part element="tns:NewOperation" name="parameters"/>
+      
+  </message>
+    
+  <message name="NewOperationResponse">
+        
+    <part element="tns:NewOperationResponse" name="parameters"/>
+      
+  </message>
+    
+  <portType name="MernisWSDLFile">
+        
+    <operation name="NewOperation">
+            
+      <input message="tns:NewOperationRequest"/>
+            
+      <output message="tns:NewOperationResponse"/>
+          
+    </operation>
+      
+  </portType>
+  
+</definitions>
